@@ -124,11 +124,11 @@ class DeviceUnlockManager(private var appContext: Context) {
                                             setUserAuthenticationValidityDurationSeconds(5)
                                         }
                                         // To store in the security chip
-                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
-                                            && appContext.packageManager.hasSystemFeature(
-                                                PackageManager.FEATURE_STRONGBOX_KEYSTORE)) {
-                                            setIsStrongBoxBacked(true)
-                                        }
+//                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+//                                            && appContext.packageManager.hasSystemFeature(
+//                                                PackageManager.FEATURE_STRONGBOX_KEYSTORE)) {
+//                                            setIsStrongBoxBacked(true)
+//                                        }
                                     }
                                     .build())
                         keyGenerator?.generateKey()
